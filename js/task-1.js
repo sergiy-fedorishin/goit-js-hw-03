@@ -1,7 +1,9 @@
 function slugify(title) {
-  title = title.toLowerCase().replace(/\s+/g, '-');
+  title = title.toLowerCase();
+  let slug = title.split(' ').join('-');
+  
 
-  return `${title}`;
+  return slug;
 }
 
 console.log(slugify('Arrays for begginers'));
